@@ -17,7 +17,7 @@ const projects: Project[] = [
         technologies: ["Kotlin", "Jetpack Compose", "Gemini", "MVI"],
         githubUrl: "https://github.com/OddzMint-Net/ActionPilotAI",
         projectUrl: "https://github.com/OddzMint-Net/ActionPilotAI",
-        image: "/projects/actionpilotai.jpeg"
+        image: "/projects/create_event.png"
 
     }, {
         title: "Ugrand? (formerly MoodTracker)",
