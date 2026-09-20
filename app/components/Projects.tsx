@@ -42,7 +42,7 @@ const projects: Project[] = [
         technologies: ["Kotlin", "Ktor", "Room", "Jetpack Compose", "MVVM"],
         githubUrl: "https://github.com/OddzMint-Net",
         projectUrl: "https://github.com/OddzMint-Net/LittleLemonApp",
-        image: "/projects/littlelemon.jpeg"
+        image: "/projects/unordered_list.png"
     }
 ]
 
