@@ -34,7 +34,7 @@ const projects: Project[] = [
         technologies: ["Kotlin", "Jetpack Compose", "Room", "MVVM"],
         githubUrl: "https://github.com/OddzMint-Net",
         projectUrl: "https://github.com/OddzMint-Net/WeatherApp",
-        image: "/projects/weather.jpeg"
+        image: "/projects/sunny_icon.png"
     },
     {
         title: "Little Lemon App",
