@@ -26,7 +26,7 @@ const projects: Project[] = [
         githubUrl: "https://github.com/OddzMint-Net/MoodTracker",
         playStoreUrl:"https://play.google.com/store/apps/details?id=com.odwa.moodtracker&hl=en",
         projectUrl: "https://play.google.com/store/apps/details?id=com.odwa.moodtracker&hl=en",
-        image: "/projects/ugrand.jpg"
+        image: "/projects/screen2.png"
     },
     {
         title: "WeatherApp",
