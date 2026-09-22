@@ -17,7 +17,7 @@ const projects: Project[] = [
         technologies: ["Kotlin", "Jetpack Compose", "Gemini", "MVI"],
         githubUrl: "https://github.com/OddzMint-Net/ActionPilotAI",
         projectUrl: "https://github.com/OddzMint-Net/ActionPilotAI",
-        image: "/projects/create_event.png"
+        image: "/projects/create_event1.png"
 
     }, {
         title: "Ugrand? (formerly MoodTracker)",
@@ -26,7 +26,7 @@ const projects: Project[] = [
         githubUrl: "https://github.com/OddzMint-Net/MoodTracker",
         playStoreUrl:"https://play.google.com/store/apps/details?id=com.odwa.moodtracker&hl=en",
         projectUrl: "https://play.google.com/store/apps/details?id=com.odwa.moodtracker&hl=en",
-        image: "/projects/screen2.png"
+        image: "/projects/new_ugrand.png"
     },
     {
         title: "WeatherApp",
@@ -34,7 +34,7 @@ const projects: Project[] = [
         technologies: ["Kotlin", "Jetpack Compose", "Room", "MVVM"],
         githubUrl: "https://github.com/OddzMint-Net",
         projectUrl: "https://github.com/OddzMint-Net/WeatherApp",
-        image: "/projects/sunny_icon.png"
+        image: "/projects/weather_1.png"
     },
     {
         title: "Little Lemon App",
@@ -42,7 +42,7 @@ const projects: Project[] = [
         technologies: ["Kotlin", "Ktor", "Room", "Jetpack Compose", "MVVM"],
         githubUrl: "https://github.com/OddzMint-Net",
         projectUrl: "https://github.com/OddzMint-Net/LittleLemonApp",
-        image: "/projects/unordered_list.png"
+        image: "/projects/lemon_1.png"
     }
 ]
 
