@@ -5,62 +5,76 @@ import {useEffect, useState} from "react";
 
 type ProjectCardProps = {
     title: string;
-    description: string;
     technologies: string[];
+    description: string;
     githubUrl: string;
-    projectUrl?: string;
     playStoreUrl?: string;
-    image: string;
+    images: string[];
 };
 
 export default function ProjectCard(
     {
         title,
-        description,
         technologies,
+        description,
         githubUrl,
         playStoreUrl,
-        projectUrl,
-        image,
+        images,
     }: ProjectCardProps) {
 
-    const [isExpanded, setIsExpanded] = useState(false)
+    const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
 
     useEffect(() => {
-        if (!isExpanded) return;
+        if (expandedIndex === null) return;
         document.body.style.overflow = "hidden";
         const handleKeyDown = (e: KeyboardEvent) => {
-            if (e.key == "Escape") setIsExpanded(false);
+            if (e.key == "Escape") setExpandedIndex(null);
 
         };
         window.addEventListener("keydown", handleKeyDown);
         return () => {
             document.body.style.overflow = "";
-            window.addEventListener("keydown", handleKeyDown);
+            window.removeEventListener("keydown", handleKeyDown);
         }
-    }, [isExpanded]);
+    }, [expandedIndex]);
     return (
         <>
             <article
-                onClick={() => setIsExpanded(true)}
-                className="group relative cursor-pointer overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-lg transition hover:-translate-y-1 dark:border-zinc-800 dark:bg-zinc-900">
-                {/* Background image */}
-                <div className="relative h-56 w-full overflow-hidden">
-                    <Image
-                        src={image}
-                        alt={`${title} screenshot`}
-                        fill
-                        className="object-cover transition duration-300 group-hover:scale-105"
-                    />
-                    {/* Dark gradient overlay so text stays readable */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-black/10"/>
+                className="relative overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-lg dark:border-zinc-800 dark:bg-zinc-900">
+                <div className="grid gap-2 p-3"
+                     style={{gridTemplateColumns: `repeat(${Math.min(images.length, 3)},minmax(0,1fr))`}}>
+                    {images.map((src, i) => (
+                        <div
+                            key={src}
+                            onClick={() => setExpandedIndex(i)}
+                            className="relative overflow-hidden rounded-lg bg-zinc-100 dark:bg-zinc-800 cursor-pointer"
+                            style={{aspectRatio: "9 /16"}}
+                        >
+                            <Image
+                                src={src}
+                                alt={`${title} screenshot ${i + 1}`}
+                                fill
+                                className="object-cover"
+                            />
+                        </div>
+                    ))}
                 </div>
 
-                {/* Floating content */}
                 <div className="p-5">
+                    <p className={
+                        playStoreUrl
+                            ? "text-xs font-medium tracking-wide text-emerald-600 dark:text-emerald-400"
+                            : "text-xs font-medium tracking-wide text-zinc-400 dark:text-zinc-500"
+                    }>
+                        {playStoreUrl ? "Production" : "GitHub"}
+                    </p>
                     <h3 className="text-lg font-semibold text-zinc-900 dark:text-white">
                         {title}
                     </h3>
+
+                    <p className="mt-1 text-sm text-zinc-500 dark:text-zinc-400">
+                        {description}
+                    </p>
 
                     <ul className="mt-3 flex flex-wrap gap-2">
                         {technologies.map((technology) => (
@@ -78,7 +92,7 @@ export default function ProjectCard(
                             target="_blank"
                             rel="noopener noreferrer"
                             onClick={(e) => e.stopPropagation()}
-                            className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-zinc-600 transition hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
+                            className="inline-flex items-center gap-2 text-sm font-medium text-zinc-600 transition hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
                         >
                             <span className="flex h-4 w-4 items-center justify-center">
                             <FaGithub className="h-4 w-4"/>
@@ -91,37 +105,40 @@ export default function ProjectCard(
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 onClick={(e) => e.stopPropagation()}
-                                aria-label="Get it on Google Play"
-                                title="Get it on Google Play"
-                                className="inline-flex items-center gap-2 text-sm font-medium text-zinc-600 transition hover:text-green-600 dark:text-zinc-400 dark:hover:text-green-400"
+                                aria-label="Get it on PlayStore"
+                                title="Get it on PlayStore"
+                                className="inline-flex items-center gap-2 text-sm font-medium text-green-600 transition hover:text-green-700 dark:text-green-400 dark:hover:text-green-300"
                             >
                                 <span className="flex h-4 w-4 items-center justify-center">
                                 <FaGooglePlay className="h-3.5 w-3.5"/>
                                 </span>
-                                Get it on Google Play
+                                Get it on PlayStore
                             </a>
                         )}
                     </div>
                 </div>
             </article>
 
-            {isExpanded && (
-                <div onClick={() => setIsExpanded(false)}
-                     className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-6">
+            {expandedIndex !== null && (
+                <div
+                    onClick={() => setExpandedIndex(null)}
+                    className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-6"
+                >
                     <button
                         type="button"
-                        onClick={() => setIsExpanded(false)}
+                        onClick={() => setExpandedIndex(null)}
                         aria-label="Close"
                         className="absolute top-6 right-6 text-3xl text-white"
                     >
                         ×
                     </button>
-
                     <div className="relative h-full max-h-[85vh] w-full max-w-4xl">
-                        <Image src={image}
-                               alt={`${title} screenshot full size`}
-                               fill
-                               className="object-contain"/>
+                        <Image
+                            src={images[expandedIndex]}
+                            alt={`${title} screenshot full size`}
+                            fill
+                            className="object-contain"
+                        />
                     </div>
                 </div>
             )}
