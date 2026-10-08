@@ -50,7 +50,7 @@ export default function Skills() {
                 Skills
             </p>
             <h2 className="mb-8 text-3xl font-bold text-zincc-900 dark:text-white">
-                What I work with
+                Tech Stack
             </h2>
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                 {skillCategories.map(({title, skills}) => (
