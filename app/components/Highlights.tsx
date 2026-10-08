@@ -12,7 +12,7 @@ type Achievement = {
 };
 
 const stats: Stat[] = [
-    {value: "5+", label: "Years experience"},
+    {value: "6", label: "Years experience"},
     {value: "Millions", label: "Of users reached"},
     {value: "1", label: "Cloud Practitioner certified"},
 ];
@@ -43,7 +43,7 @@ export default function Highlights() {
                 Highlights
             </p>
             <h2 className="mb-8 text-3xl font-bold text-zinc-900 dark:text-white">
-                Proofs, not just claims
+                Track Record
             </h2>
 
             <div className="grid grid-cols--2 gap-4 sm:grid-cols-4">
