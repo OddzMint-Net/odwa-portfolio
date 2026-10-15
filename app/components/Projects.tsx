@@ -23,7 +23,7 @@ const projects: Project[] = [
         technologies: ["Kotlin", "Jetpack Compose", "Room", "Gemini", "MVVM"],
         githubUrl: "https://github.com/OddzMint-Net/MoodTracker",
         playStoreUrl: "https://play.google.com/store/apps/details?id=com.odwa.moodtracker&hl=en",
-        images: ["/projects/new_ugrand.png", "/projects/ugrand_dark.png", "/projects/mood_unselected.png"],
+        images: ["/projects/onboard1.png", "/projects/onboard2.png", "/projects/onboard3.png"],
     },
     {
         title: "ActionPilotAI",
