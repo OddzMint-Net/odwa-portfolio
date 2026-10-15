@@ -19,8 +19,8 @@ const projects: Project[] = [
     },
     {
         title: "Ugrand",
-        description: "Ugrand? (formerly MoodTracker) is a Jetpack Compose Android app that helps users log their mood, reflect on their emotions, and receive AI-powered journaling prompts — built as a demonstration of production-grade Android architecture.",
-        technologies: ["Kotlin", "Jetpack Compose", "Room", "Gemini", "MVVM"],
+        description: "Ugrand? (formerly MoodTracker) is a Jetpack Compose Android app for quick, honest mood check-ins. Tap a mood, or type how you feel in your own words, and get a short AI-generated reflection from the Gemini API, personalised with your recent mood history. Includes a first-run onboarding flow, local history with Room, and offline fallback messages. Built with Clean Architecture and published on Google Play.",
+        technologies: [ "Kotlin", "Jetpack Compose", "Clean Architecture", "MVVM", "Hilt", "Room", "DataStore", "Coroutines & Flow","Gemini API"],
         githubUrl: "https://github.com/OddzMint-Net/MoodTracker",
         playStoreUrl: "https://play.google.com/store/apps/details?id=com.odwa.moodtracker&hl=en",
         images: ["/projects/onboard1.png", "/projects/onboard2.png", "/projects/onboard3.png"],
