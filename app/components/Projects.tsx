@@ -26,7 +26,7 @@ const projects: Project[] = [
             "Coroutines & Flow",
         ],
         githubUrl: "https://github.com/OddzMint-Net/SlipStash",
-        images: ["/projects/expenses_dark.png", "/projects/firestore_console.jpeg", "/projects/queued_offline.jpg"],
+        images: ["/projects/synced.jpg", "/projects/summary.jpg", "/projects/add_expense.png"],
     },
     {
         title: "NewsOutletApp",
