@@ -12,7 +12,7 @@ type Project = {
 const projects: Project[] = [
     {
         title: "SlipStash",
-        description: "SlipStash is an offline-first expense tracker for Android. Record an expense and snap a receipt, and it saves instantly on the phone, even with no signal. A background job then syncs everything to Firebase when a connection returns, retrying automatically if anything fails. Each expense shows a live status (Queued, Syncing, Synced or Retry). Built with Jetpack Compose and Clean Architecture, with WorkManager for background sync and Firestore security rules so every user can only access their own data.",
+        description: "An offline-first expense tracker for Android. Expenses and receipt photos save instantly on the phone, and a WorkManager pipeline syncs them to Firebase when a connection returns. Sync is idempotent, using unique IDs and unique work per expense, so retries never create duplicates, and Firestore rules keep each user's data private.",
         technologies: [
             "Kotlin",
             "Jetpack Compose",
@@ -26,7 +26,7 @@ const projects: Project[] = [
             "Coroutines & Flow",
         ],
         githubUrl: "https://github.com/OddzMint-Net/SlipStash",
-        images: ["/projects/synced.jpg", "/projects/summary.jpg", "/projects/add_expense.png"],
+        images: ["/projects/synced.jpg", "/projects/summary.jpg", "/projects/Add_Expense_Screen.png"],
     },
     {
         title: "NewsOutletApp",
