@@ -73,7 +73,6 @@ export default function Hero({
                                     Available for work
                             </span>
                         )}
-
                     </div>
 
                     <div className="mt-8 flex flex-wrap gap-3">

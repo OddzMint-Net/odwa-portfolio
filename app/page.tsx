@@ -15,8 +15,7 @@ export default function Home() {
                   title="Android Software Engineer building AI-powered experiences"
                   description="Software Engineer with 5+ years delivering production Android applications across banking, and enterprise environments. I combine mobile engineering with AI, workflow automation, and scalable architecture — writing clean, maintainable code and shipping products people actually use."
                   highlight="AI Engineering"
-                  location="Johannesburg, Gauteng"
-            />
+                  location="Johannesburg, Gauteng"/>
 
             <Projects/>
             <Highlights/>
