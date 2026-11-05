@@ -1,11 +1,17 @@
-import {FaEnvelope, FaLinkedin, FaGithub} from "react-icons/fa";
+import {FaWhatsapp,FaEnvelope, FaLinkedin, FaGithub} from "react-icons/fa";
 
 const contactLinks = [
     {
+        href: "https://web.whatsapp.com/",
+        label: "WhatsApp",
+        Icon:FaWhatsapp,
+        variant:"primary" as const
+    }
+    ,{
         href: "mailto:odwamtatambi@gmail.com",
         label: "Email me",
         Icon: FaEnvelope,
-        variant: "primary" as const,
+        variant: "secondary" as const,
     },
     {
         href: "https://www.linkedin.com/in/odwa-mtatambi-ab7022104",
@@ -45,7 +51,7 @@ export default function Contact() {
                             rel={variant == "secondary" ? "noopener noreferrer" : undefined}
                             className={
                                 variant == "primary"
-                                    ? "inline-flex items-center gap-2 rounded-full bg-purple-600 px-6 py-3 text-sm font-medium text-white transition hover:bg-purple-700 dark:bg-purple-500 dark:hover:bg-purple-600"
+                                    ? "inline-flex items-center gap-2 rounded-full bg-green-600 px-6 py-3 text-sm font-medium text-white transition hover:bg-green-700 dark:bg-green-500 dark:hover:bg-green-600"
                                     : "inline-flex items-center gap-2 rounded-full border border-zinc-300 px-6 py-3 text-sm font-medium text-zinc-900 transition hover:bg-zinc-100 dark:border-zinc-700 dark:text-white dark:hover:bg-zinc-800"
                             }
                         >
