@@ -1,6 +1,8 @@
 "use client";
 import {useState} from "react"
-import {FaLinkedin, FaGithub, FaMedium,FaTag} from "react-icons/fa";
+import {FaLinkedin, FaGithub, FaMedium, FaTag, FaDownload} from "react-icons/fa";
+
+const CV_PATH = "/cv/OdwaMtatambi_Curriculum_Vitae.pdf";
 
 const navLinks = [
     {href: "#home", label: "Home"},
@@ -33,11 +35,10 @@ export default function Navbar() {
                         <a
                             key={label}
                             href={href}
-                            className="rounded-lg px-4 py-2 text-sm font-medium text-zinc-600 transition hover:bg-zinc-100 hover:text-zinc-900 dark:text-zinc-400 dark:hover:bg-zinc-800 dark:hover:text-white">
+                            className="rounded-lg px-4 py-2 text-sm font-medium text-zinc-600 transtion hover:bg-zinc-100 hover:text-zinc-900 dark:text-zinc-400 dark:hover:bg-zinc-800 dark:hover:text-white">
                             {label}
                         </a>
                     ))}
-
                 </div>
 
                 <div className="flex items-center justify-end gap-8">
@@ -48,6 +49,15 @@ export default function Navbar() {
                                 <Icon className={"h-6 w-auto"}/>
                             </a>
                         ))}
+
+                        <a
+                            href={CV_PATH}
+                            download="Odwa-Mtatambi-CV.pdf"
+                            aria-label="Download CV"
+                            className="inline-flex w-fit items-center gap-2 rounded-full bg-zinc-100 px-4 py-2 text-sm font-medium text-zinc-700 transtion-colors hover:bg-zinc-200 dark:bg-zinc-800 dark:text-zinc-200 dark:hover:bg-zinc-700">
+                            <FaDownload className="h-3.5 w-3.5"/>
+                            CV
+                        </a>
                     </div>
 
                     <button
@@ -56,7 +66,7 @@ export default function Navbar() {
                         className="text-2xl text-zinc-900 dark:text-white md:hidden"
                         aria-label="Toggle navigation menu"
                     >
-                        {isOpen ? "x" : "☰"}
+                        {isOpen ? "X" : "☰"}
                     </button>
                 </div>
             </div>
@@ -65,19 +75,28 @@ export default function Navbar() {
                 isOpen && (
                     <div
                         className="flex flex-col gap-4 border-t border-zinc-200 px-6 pt-4 pb-4 md:hidden dark:border-zinc-800">
-                        <a href="#about" onClick={() => setIsOpen(false)}
-                           className="text-sm font-medium text-zinc-600 dark:text-zinc-400">
-                            About
-                        </a>
-                        <a href="#projects" onClick={() => setIsOpen(false)}
-                           className="text-sm font-medium text-zinc-600 dark:text-zinc-400">
-                            Projects
+
+                        {navLinks.map(({href, label}) => (
+                            <a
+                                key={label}
+                                href={href}
+                                onClick={() => setIsOpen(false)}
+                                className="text-sm font-medium text-zinc-600 dark:text-zinc-400">
+                                {label}
+                            </a>
+
+                        ))}
+
+                        <a
+                            href={CV_PATH}
+                            download="Odwa-Mtatambi-CV.pdf"
+                            aria-label="Download CV"
+                            onClick={() => setIsOpen(false)}
+                            className="inline-flex w-fit items-center gap-2 rounded-full bg-zinc-100 px-4 py-2 text-sm font-medium text-zinc-700 transtion-colors hover:bg-zinc-200 dark:bg-zinc-800 dark:text-zinc-200 dark:hover:bg-zinc-700">
+                            <FaDownload className="h-3.5 w-3.5"/>
+                            CV
                         </a>
 
-                        <a href="#contact" onClick={() => setIsOpen(false)}
-                           className="text-sm font-medium text-zinc-600 dark:text-zinc-400">
-                            Contact
-                        </a>
                         <div
                             className="flex gap-6 pt-2">
                             {socialLinks.map(({href, label, Icon}) => (
@@ -91,5 +110,5 @@ export default function Navbar() {
             }
         </nav>
     )
-        ;
+
 }

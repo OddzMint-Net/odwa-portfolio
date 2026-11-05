@@ -14,7 +14,8 @@ type Achievement = {
 const stats: Stat[] = [
     {value: "6", label: "Years experience"},
     {value: "Millions", label: "Of users reached"},
-    {value: "1", label: "Cloud Practitioner certified"},
+    {value: "1", label: "AWS Cloud Practitioner certified"},
+    {value:"2+", label: "Advanced Programming in Kotlin Certifications"}
 ];
 
 const achievements: Achievement[] = [
