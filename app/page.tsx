@@ -11,10 +11,10 @@ export default function Home() {
         <main>
             <Navbar/>
             <Hero name="Odwa Mtatambi"
-                  role="Software Engineer"
-                  title="Android Software Engineer building AI-powered experiences"
-                  description="Software Engineer with 5+ years delivering production Android applications across banking, and enterprise environments. I combine mobile engineering with AI, workflow automation, and scalable architecture — writing clean, maintainable code and shipping products people actually use."
-                  highlight="AI Engineering"
+                  role="Android Software Engineer"
+                  title="Android engineer building reliable, offline-first apps with Kotlin and Jetpack Compose"
+                  description="Android Software Engineer with 6 years delivering production apps across banking and enterprise environments. I build with Kotlin, Jetpack Compose and Clean Architecture, and I care about the parts that make an app dependable: testing, CI/CD, and sync that works when the network doesn't."
+                  highlight="offline-first"
                   location="Johannesburg, Gauteng"/>
 
             <Projects/>

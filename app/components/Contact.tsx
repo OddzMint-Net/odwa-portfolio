@@ -1,7 +1,7 @@
 import {FaWhatsapp, FaEnvelope, FaLinkedin, FaGithub} from "react-icons/fa";
 
 const WHATSAPP_NUMBER = "27838728955";
-const WHATSAPP_MESSAGE = "Hi Odwa, I saw your portfolio and would like to chat, Are you available";
+const WHATSAPP_MESSAGE = "Hi Odwa, I saw your portfolio and would like to chat, Are you available?";
 
 const contactLinks = [
     {
