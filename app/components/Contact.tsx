@@ -1,13 +1,16 @@
-import {FaWhatsapp,FaEnvelope, FaLinkedin, FaGithub} from "react-icons/fa";
+import {FaWhatsapp, FaEnvelope, FaLinkedin, FaGithub} from "react-icons/fa";
+
+const WHATSAPP_NUMBER = "27838728955";
+const WHATSAPP_MESSAGE = "Hi Odwa, I saw your portfolio and would like to chat, Are you available";
 
 const contactLinks = [
     {
-        href: "https://web.whatsapp.com/",
+        href: `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`,
         label: "WhatsApp",
-        Icon:FaWhatsapp,
-        variant:"primary" as const
+        Icon: FaWhatsapp,
+        variant: "primary" as const
     }
-    ,{
+    , {
         href: "mailto:odwamtatambi@gmail.com",
         label: "Email me",
         Icon: FaEnvelope,
