@@ -26,9 +26,8 @@ export default function SlipStashPrivacy() {
                     anonymous ID for you automatically.
                 </li>
                 <li>
-                    Your expenses are saved on your phone first, and then backed up to a
-                    cloud database (Google Firebase). Receipt photos stay on your phone
-                    only.
+                    Your expenses and receipt photos are saved on your phone first, and
+                    then backed up to a cloud database (Google Firebase).
                 </li>
                 <li>
                     I don’t sell your data, I don’t show ads, and I don’t use analytics or
@@ -45,11 +44,10 @@ export default function SlipStashPrivacy() {
             </p>
             <p>
                 <strong>Receipt photos (optional).</strong> If you take a photo of a
-                receipt, the app stores a compressed copy in its private storage on
-                your phone. Receipt photos are not uploaded to the cloud and never
-                leave your device. The app uses your phone’s camera app to take the
-                photo, so it does not ask for camera permission and does not read your
-                photo gallery.
+                receipt, the app stores it on your phone. A compressed copy is
+                uploaded to the cloud database (Google Firestore) under your anonymous
+                ID. The app uses your phone’s camera app to take the photo, so it does
+                not ask for camera permission and does not read your photo gallery.
             </p>
             <p>
                 <strong>An anonymous ID.</strong> When you first open the app, Firebase
@@ -109,16 +107,14 @@ export default function SlipStashPrivacy() {
             <h2>Deleting your data</h2>
             <p>
                 <strong>One expense.</strong> Swipe the expense left in the list. It is
-                removed from your phone and from the cloud, and its receipt photo is
-                removed from your phone. You can tap Undo for a few seconds after
-                swiping.
+                removed from your phone and from the cloud, together with its receipt
+                photo. You can tap Undo for a few seconds after swiping.
             </p>
             <p>
                 <strong>Everything.</strong> Open Settings &gt; Delete all my data in
-                the app. This permanently deletes all your expenses from the cloud and
-                all your expenses and receipt photos from your phone, and deletes your
-                anonymous ID. This needs an internet connection, because the cloud data
-                is removed first
+                the app. This permanently deletes all your expenses and receipt photos
+                from your phone and from the cloud, and deletes your anonymous ID. This
+                needs an internet connection, because the cloud data is removed first.
             </p>
             <p>
                 <strong>If you uninstall the app first.</strong> Uninstalling removes
@@ -135,6 +131,25 @@ export default function SlipStashPrivacy() {
             <p>
                 SlipStash is intended for people aged 18 and over. It is not directed at
                 anyone under 18, and I don’t knowingly collect data from people under 18.
+            </p>
+
+            <h2>Your rights and complaints</h2>
+            <p>
+                You can ask me what data I hold, ask me to correct it, or ask me to
+                delete it by emailing{" "}
+                <a href="mailto:odwamtatambi@gmail.com">odwamtatambi@gmail.com</a>.
+                Because the app has no name or email, I may only be able to help if
+                you can tell me your anonymous ID. If you are not happy with how I
+                handle your data, you can complain to South Africa’s Information
+                Regulator at{" "}
+                <a
+                    href="https://inforegulator.org.za"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    inforegulator.org.za
+                </a>
+                .
             </p>
 
             <h2>Changes to this policy</h2>
