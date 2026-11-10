@@ -26,8 +26,9 @@ export default function SlipStashPrivacy() {
                     anonymous ID for you automatically.
                 </li>
                 <li>
-                    Your expenses and receipt photos are saved on your phone first, and
-                    then backed up to a cloud database (Google Firebase).
+                    Your expenses are saved on your phone first, and then backed up to a
+                    cloud database (Google Firebase). Receipt photos stay on your phone
+                    only.
                 </li>
                 <li>
                     I don’t sell your data, I don’t show ads, and I don’t use analytics or
@@ -44,10 +45,11 @@ export default function SlipStashPrivacy() {
             </p>
             <p>
                 <strong>Receipt photos (optional).</strong> If you take a photo of a
-                receipt, the app stores it on your phone. A compressed copy is uploaded
-                to the cloud. The app uses your phone’s camera app to take the photo, so
-                it does not ask for camera permission and does not read your photo
-                gallery.
+                receipt, the app stores a compressed copy in its private storage on
+                your phone. Receipt photos are not uploaded to the cloud and never
+                leave your device. The app uses your phone’s camera app to take the
+                photo, so it does not ask for camera permission and does not read your
+                photo gallery.
             </p>
             <p>
                 <strong>An anonymous ID.</strong> When you first open the app, Firebase
@@ -83,8 +85,18 @@ export default function SlipStashPrivacy() {
                 provided by Google through Firebase, under your anonymous ID. Google
                 acts as a service provider that stores and processes the data for me.
                 Data is encrypted in transit, and the database rules only allow each
-                anonymous ID to read and write its own data. The data is stored in the
-                Google Cloud region chosen for this project.
+                anonymous ID to read and write its own data. The data is stored in
+                Google’s Johannesburg, South Africa region (africa-south1). Google
+                applies its own security and data protection commitments to this
+                storage, described in the{" "}
+                <a
+                    href="https://firebase.google.com/support/privacy"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Firebase privacy information
+                </a>
+                .
             </p>
             <p>
                 No method of storage or transmission is completely secure, so I can’t
@@ -97,14 +109,16 @@ export default function SlipStashPrivacy() {
             <h2>Deleting your data</h2>
             <p>
                 <strong>One expense.</strong> Swipe the expense left in the list. It is
-                removed from your phone and from the cloud, together with its receipt
-                photo. You can tap Undo for a few seconds after swiping.
+                removed from your phone and from the cloud, and its receipt photo is
+                removed from your phone. You can tap Undo for a few seconds after
+                swiping.
             </p>
             <p>
                 <strong>Everything.</strong> Open Settings &gt; Delete all my data in
-                the app. This permanently deletes all your expenses and receipt photos
-                from your phone and from the cloud, and deletes your anonymous ID. This
-                needs an internet connection, because the cloud data is removed first.
+                the app. This permanently deletes all your expenses from the cloud and
+                all your expenses and receipt photos from your phone, and deletes your
+                anonymous ID. This needs an internet connection, because the cloud data
+                is removed first
             </p>
             <p>
                 <strong>If you uninstall the app first.</strong> Uninstalling removes
