@@ -9,7 +9,7 @@ export default function SlipStashPrivacy() {
         <main className={styles.policy}>
 
             <h1>SlipStash Privacy Policy</h1>
-            <p className={styles.updated}>Last updated: 10 November 2026</p>
+            <p className={styles.updated}>Last updated: 11 November 2026</p>
             <p>
                 SlipStash is an expense tracking app for Android, created by Odwa
                 Mtatambi (“I”, “me”). This policy explains what data the app stores,
@@ -52,7 +52,9 @@ export default function SlipStashPrivacy() {
             <p>
                 <strong>An anonymous ID.</strong> When you first open the app, Firebase
                 Authentication creates a random user ID for this installation. It is not
-                linked to your name, email address or phone number.
+                linked to your name, email address or phone number. Firebase may also
+                create technical identifiers for the app installation so that its
+                services work.
             </p>
             <p>
                 <strong>What the app does not collect.</strong> Your name, email
@@ -98,7 +100,9 @@ export default function SlipStashPrivacy() {
             </p>
             <p>
                 No method of storage or transmission is completely secure, so I can’t
-                guarantee absolute security.
+                guarantee absolute security. If a security breach affects your data in a
+                way that puts you at risk, I will notify the Information Regulator and,
+                where I am able to reach you, the people affected.
             </p>
 
             <h2>How long data is kept</h2>
