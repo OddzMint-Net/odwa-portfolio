@@ -9,7 +9,7 @@ export default function SlipStashPrivacy() {
         <main className={styles.policy}>
 
             <h1>SlipStash Privacy Policy</h1>
-            <p className={styles.updated}>Last updated: 10 November 2026</p>
+            <p className={styles.updated}>Last updated: 11 November 2026</p>
             <p>
                 SlipStash is an expense tracking app for Android, created by Odwa
                 Mtatambi (“I”, “me”). This policy explains what data the app stores,
@@ -44,15 +44,17 @@ export default function SlipStashPrivacy() {
             </p>
             <p>
                 <strong>Receipt photos (optional).</strong> If you take a photo of a
-                receipt, the app stores it on your phone. A compressed copy is uploaded
-                to the cloud. The app uses your phone’s camera app to take the photo, so
-                it does not ask for camera permission and does not read your photo
-                gallery.
+                receipt, the app stores it on your phone. A compressed copy is
+                uploaded to the cloud database (Google Firestore) under your anonymous
+                ID. The app uses your phone’s camera app to take the photo, so it does
+                not ask for camera permission and does not read your photo gallery.
             </p>
             <p>
                 <strong>An anonymous ID.</strong> When you first open the app, Firebase
                 Authentication creates a random user ID for this installation. It is not
-                linked to your name, email address or phone number.
+                linked to your name, email address or phone number. Firebase may also
+                create technical identifiers for the app installation so that its
+                services work.
             </p>
             <p>
                 <strong>What the app does not collect.</strong> Your name, email
@@ -83,12 +85,24 @@ export default function SlipStashPrivacy() {
                 provided by Google through Firebase, under your anonymous ID. Google
                 acts as a service provider that stores and processes the data for me.
                 Data is encrypted in transit, and the database rules only allow each
-                anonymous ID to read and write its own data. The data is stored in the
-                Google Cloud region chosen for this project.
+                anonymous ID to read and write its own data. The data is stored in
+                Google’s Johannesburg, South Africa region (africa-south1). Google
+                applies its own security and data protection commitments to this
+                storage, described in the{" "}
+                <a
+                    href="https://firebase.google.com/support/privacy"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Firebase privacy information
+                </a>
+                .
             </p>
             <p>
                 No method of storage or transmission is completely secure, so I can’t
-                guarantee absolute security.
+                guarantee absolute security. If a security breach affects your data in a
+                way that puts you at risk, I will notify the Information Regulator and,
+                where I am able to reach you, the people affected.
             </p>
 
             <h2>How long data is kept</h2>
@@ -121,6 +135,25 @@ export default function SlipStashPrivacy() {
             <p>
                 SlipStash is intended for people aged 18 and over. It is not directed at
                 anyone under 18, and I don’t knowingly collect data from people under 18.
+            </p>
+
+            <h2>Your rights and complaints</h2>
+            <p>
+                You can ask me what data I hold, ask me to correct it, or ask me to
+                delete it by emailing{" "}
+                <a href="mailto:odwamtatambi@gmail.com">odwamtatambi@gmail.com</a>.
+                Because the app has no name or email, I may only be able to help if
+                you can tell me your anonymous ID. If you are not happy with how I
+                handle your data, you can complain to South Africa’s Information
+                Regulator at{" "}
+                <a
+                    href="https://inforegulator.org.za"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    inforegulator.org.za
+                </a>
+                .
             </p>
 
             <h2>Changes to this policy</h2>
