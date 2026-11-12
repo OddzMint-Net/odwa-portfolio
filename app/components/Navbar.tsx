@@ -2,7 +2,7 @@
 import {useState} from "react"
 import {FaLinkedin, FaGithub, FaMedium, FaTag, FaDownload} from "react-icons/fa";
 
-const CV_PATH = "/cv/OdwaMtatambi_Curriculum_Vitae.pdf";
+const CV_PATH = "/cv/Odwa_Mtatambi_CV.pdf";
 
 const navLinks = [
     {href: "#home", label: "Home"},
