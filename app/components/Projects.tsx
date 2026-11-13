@@ -12,7 +12,7 @@ type Project = {
 const projects: Project[] = [
     {
         title: "SlipStash",
-        description: "An offline-first expense tracker for Android. Expenses and receipt photos save instantly on the phone, and a WorkManager pipeline syncs them to Firebase when a connection returns. Sync is idempotent, using unique IDs and unique work per expense, so retries never create duplicates, and Firestore rules keep each user's data private.",
+        description: "An offline-first expense tracker for Android. Expenses and receipt photos save instantly on the phone, and a WorkManager pipeline syncs them to Firebase when a connection returns. Sync is idempotent, so retries never create duplicates. Firestore rules keep each user’s data private, and a monthly summary shows where the money goes. Users can delete one expense or all their data from inside the app.",
         technologies: [
             "Kotlin",
             "Jetpack Compose",
